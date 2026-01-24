@@ -1,27 +1,13 @@
-// src/components/Header.tsx
+import { SHOP_INFO } from "../constants";
 
 const Header = () => {
-  const phoneNumber = "+998901234567"; // Замени на реальный номер
-  const address = "г. Ташкент, ул. Чиланзар, 5";
-
   return (
-    <header style={headerStyle}>
-      <div className="logo">
-        <h2 style={{ margin: 0, color: '#d4a373' }}>Mayin Gilam</h2>
-      </div>
-      
-      <nav style={navStyle}>
-        <div className="info-item">
-          <span>📍 {address}</span>
-        </div>
-        <div className="info-item">
-          {/* Ссылка tel: позволяет звонить при клике с телефона */}
-          <a href={`tel:${phoneNumber}`} style={phoneLinkStyle}>
-            📞 {phoneNumber}
-          </a>
-        </div>
-      </nav>
-    </header>
+  <header>
+<h2>{SHOP_INFO.name}</h2>
+<span>{SHOP_INFO.address}</span>
+<a href={`tel:${SHOP_INFO.phone}`}>{SHOP_INFO.phone}</a>
+  </header>
+
   );
 };
 
