@@ -1,4 +1,4 @@
-import { SHOP_INFO } from "../constants";
+import { SHOP_INFO, LOGO_TEXT } from "../constants";
 
 const Header = () => {
   return (
@@ -12,26 +12,26 @@ const Header = () => {
 };
 
 // Простые стили прямо в файле для быстрого старта
-const headerStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  padding: '20px 5%',
-  backgroundColor: '#fefae0',
-  boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
-};
+// const headerStyle = {
+//   display: 'flex',
+//   justifyContent: 'space-between',
+//   alignItems: 'center',
+//   padding: '20px 5%',
+//   backgroundColor: '#fefae0',
+//   boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
+// };
 
-const navStyle = {
-  display: 'flex',
-  gap: '20px',
-  alignItems: 'center'
-};
+// const navStyle = {
+//   display: 'flex',
+//   gap: '20px',
+//   alignItems: 'center'
+// };
 
-const phoneLinkStyle = {
-  textDecoration: 'none',
-  color: '#bc6c25',
-  fontWeight: 'bold',
-  fontSize: '1.1rem'
-};
+// const phoneLinkStyle = {
+//   textDecoration: 'none',
+//   color: '#bc6c25',
+//   fontWeight: 'bold',
+//   fontSize: '1.1rem'
+// };
 
 export default Header;
