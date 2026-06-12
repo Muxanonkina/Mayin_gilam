@@ -1,37 +1,31 @@
-import { SHOP_INFO, LOGO_TEXT } from "../constants";
+import { SHOP_INFO, LOGO_TEXT, NAV_LINKS } from "../constants";
 
 const Header = () => {
   return (
-  <header>
-<h2>{SHOP_INFO.name}</h2>
-<span>{SHOP_INFO.address}</span>
-<a href={`tel:${SHOP_INFO.phone}`}>{SHOP_INFO.phone}</a>
-  </header>
+    <header className="site-header">
+      <div className="site-header__inner">
+        <a href="#top" className="site-header__logo">
+          {LOGO_TEXT}
+        </a>
 
+        <nav className="site-nav" aria-label="Главное меню">
+          <ul className="site-nav__list">
+            {NAV_LINKS.map((link) => (
+              <li key={link.id}>
+                <a className="site-nav__link" href={link.href}>
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <a className="site-header__phone" href={`tel:${SHOP_INFO.phoneHref}`}>
+          {SHOP_INFO.phone}
+        </a>
+      </div>
+    </header>
   );
 };
-
-// Простые стили прямо в файле для быстрого старта
-// const headerStyle = {
-//   display: 'flex',
-//   justifyContent: 'space-between',
-//   alignItems: 'center',
-//   padding: '20px 5%',
-//   backgroundColor: '#fefae0',
-//   boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
-// };
-
-// const navStyle = {
-//   display: 'flex',
-//   gap: '20px',
-//   alignItems: 'center'
-// };
-
-// const phoneLinkStyle = {
-//   textDecoration: 'none',
-//   color: '#bc6c25',
-//   fontWeight: 'bold',
-//   fontSize: '1.1rem'
-// };
 
 export default Header;
